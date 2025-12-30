@@ -1,16 +1,10 @@
-# React + Vite
+# note to self
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- after coming back to the odin project after christmas break, I tried to make a vite react project 
+with the "npm create vite@latest someproject -- --template react", but I forgot that the name of the project 
+cannot have capital letters due to npm's naming convention. Make sure when making future projects to not have any
+capital letters in the project name.
 
-Currently, two official plugins are available:
+# purpose of this repo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- this is going over the example assignment in the react mock components and callbacks section in the odin project.
