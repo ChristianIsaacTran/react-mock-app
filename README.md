@@ -50,3 +50,29 @@ afterEach(()=> {
 });
 
 - make sure to include this setup file inside the vite.config.js
+
+## note in testing:
+
+- if I want to inspect the html structure of the component, there is an optional screen.debug() function that I can call
+that would show me the component's html structure during the npm run test script.
+
+## main takeaway
+
+1. to simulate a callback to track the number of times its been called to assert it with build in functions through vitest like
+.toHaveBeenCalledTimes() or checking if it was even called at all with .toHaveBeenCalled(), we use:
+
+    const mockedCallback = vi.fn();
+
+2. to simulate an entire module or override a component's implementation, we use:
+
+    vi.mock("path to mocked file", () => ({someProp}) => <div data-testid="someName">{someProp}</div>);
+
+    - where the first arrow function tells the .mock() function that we are overriding the logic, then the second arrow function is the 
+    actual replacement for the implementation. In this case above we are overriding the logic with a new function that accepts some kind of 
+    prop named "someProp" then returning a react component that uses "someProp" inside the div with a data-testid attribute to query later in the 
+    testing phase.
+
+
+3. Mocking is used to isolate the thing we are trying to test by "simulating" external things like API calls or even entire modules or components 
+to only test the behavior of the main thing itself. Mocking the callbacks or the child components/API calls makes the outside factors predictable
+and allows us to only interact with the main component during testing.
